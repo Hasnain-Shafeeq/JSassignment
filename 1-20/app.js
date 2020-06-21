@@ -1,3 +1,36 @@
+var Password;
+var whileCounter = 0;
+var convertedArray = [];
+
+while (whileCounter != 1) {
+    Password = prompt("Enter Password");
+    if (Password.length <= 5) {
+        alert("must be 6 or more characters long");
+    }
+    else {
+        var passToArray = Array.from(Password);
+        for (var i = 0; i <= passToArray.length-1; i++) {
+            var str = passToArray[i];
+            convertedArray.push(str.charCodeAt());
+            //document.write(str.charCodeAt());
+            //document.write("<br>");
+        }
+        for (var i = 0; i <= convertedArray.length-1; i++) {
+            var str = convertedArray[i];
+            if (((str >= 65 && str <= 90) || (str >= 97 && str <= 122)) || (str >= 48 && str <= 57)) {
+                document.write(str+"<br>");
+            }
+            else {
+                    alert("Error -> "+str);
+                    break;
+            }    
+        }        
+        whileCounter = 1;
+    }
+}
+document.write("<br>----------<br>"+convertedArray);
+
+
 //----------------- CHAPTER 1
     // //task1
     //alert("Hello! Welcome to the website");
