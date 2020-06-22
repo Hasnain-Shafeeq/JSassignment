@@ -149,8 +149,8 @@
     
 
     // //task18
-    // var str = "The quick brown fox jumps over lazy the dog"
-    // var spilitted = str.toLocaleLowerCase().split(" ");
+    // var str = "The quick brown fox jumps over lazy the dog";
+    // var spilitted = str.toLowerCase().split(" ");
     // var wordToFind = "the";
     // var occurances = 0;
     // for (var i = 0; i < spilitted.length; i++) {
@@ -344,17 +344,165 @@
         
 
 //----------------- CHAPTER 35-38
-    //task1
-    //task2
-    //task3
-    //task4
-    //task5
-    //task6
-    //task7
-    //task8
-    //task9
-    //task10
-    //task11
-    //task12
-    //task13
-    //task14
+    // //task1
+    // function showDateTime() {
+    //     var currentDate = new Date();
+    //     document.write(currentDate);
+    // }
+    // showDateTime();
+
+    // //task2
+    // function greetUser(fname,lname) {
+    //     var fullName = fname + " " + lname;
+    //     alert("Welcome! Dear " + fullName);
+    // }
+    // var askFirstName = prompt("Enter Your First Name");
+    // var askLastName = prompt("Enter Your Last Name");
+    // greetUser(askFirstName,askLastName);
+
+    // //task3
+    // function sumOfTwo(x,y) {
+    //     return sum = x + y;
+    // }
+    // var askFirstNum = +prompt("Enter First Number");
+    // var askSecondNum = +prompt("Enter Second Number");
+    // document.write(sumOfTwo(askFirstNum,askSecondNum));
+
+    // //task4
+    // function calc(num1,num2,opr) {
+    //     if (opr === "+") {
+    //         return num1 + num2; 
+    //     } 
+    //     else if(opr === "-") {
+    //         return num1 - num2;
+    //     }
+    //     else if(opr === "/") {
+    //         return num1 / num2;
+    //     }
+    //     else if(opr === "*") {
+    //         return num1 * num2;
+    //     }
+    //     else if(opr === "%") {
+    //         return num1 % num2;
+    //     }
+    //     else {
+    //         return "Wrong Command";
+    //     }
+    // }
+    // var num1 = +prompt("Enter First Number");
+    // var num2 = +prompt("Enter Second Number");
+    // var opr = prompt("Enter Operator");
+    // alert("Equation is " + num1 + opr + num2 + "\nOutput is " + calc(num1,num2,opr));
+ 
+    // //task5
+    // function squareMe(x) {
+    //     alert("Input is "+x + "\nSquare is " + x*x);
+    // }
+    // squareMe(+prompt("Enter any number"));
+    
+    // //task6
+    // function numFactorial(x) {
+    //     var initial = x;
+    //     for (var i = x-1; i > 0; i--) {
+    //         x *= i;
+    //     }
+    //     alert("Input is "+initial + "\nFactorial is " + x);
+    // }
+    // numFactorial(+prompt("Enter any number"));
+    
+    // //task7
+    // function displayCounting(x,y) {
+    //     for (var i = x; i <= y; i++) {
+    //         document.write(i + "<br>");
+    //     }
+    // }
+    // displayCounting(+prompt("Enter Counting Start Number"),+prompt("Enter Counting End Number"));
+
+    // //task8
+    // function calculateHypotenuse(base,perpendicular) {
+    //     var finalHypotenuse;
+    //     var hypSquare = Math.pow(base,2) + Math.pow(perpendicular,2);
+    //     function calculateSquare(hyp) {
+    //         finalHypotenuse = Math.sqrt(hyp).toFixed(2);
+    //         return finalHypotenuse;
+    //     }
+    //     calculateSquare(hypSquare);
+    //     return finalHypotenuse;
+    // }
+    // document.write(calculateHypotenuse(10,10));
+
+    // //task9
+    // function calcArea(w,h) {
+    //     var A = w * h;
+    //     return A;
+    // }
+    // //Arguments As Values
+    // alert("Area of Rectengle: " + calcArea(20,10));
+    // //Arguments As Variables
+    // var width = 20;
+    // var height = 10;
+    // alert("Area of Rectengle: " + calcArea(width,height));
+
+    // //task10
+    // function checkPalindrome(str) {
+    //     var reversed = "";
+    //     for (var i = str.length-1; i >= 0; i--) {
+    //         reversed += str[i];
+    //     }
+    //     if (str === reversed) {
+    //         alert("It's a Palindrome");
+    //     } else {
+    //         alert("It's not a Palindrome");
+    //     }
+    // }
+    // checkPalindrome(prompt("Enter a string to check it's Palindrome or not"));
+
+    // //task11
+    // function titleCase(str) {
+    //     var splitted = str.split(" ");
+    //     for (var i = 0; i < splitted.length; i++) {
+    //         document.write(splitted[i].charAt(0).toUpperCase()+splitted[i].substring(1,)+" ");
+    //     }
+    // }
+    // titleCase(prompt("Enter any word here","This is a sample text").toLowerCase());
+    
+    // //task12
+    // function findLongest(str) {
+    //     var strToArr = str.split(" ")
+    //     var longest = strToArr[0];
+    //     for (var i = 1; i < strToArr.length; i++) {
+    //         if (strToArr[i].length > longest.length ) {
+    //           longest = strToArr[i];
+    //         }
+    //     }
+    //     document.write("String: " + str + "<br>Longest Word: " + longest);
+    // }
+    // findLongest("This is javascript second assignment.");
+    
+    // //task13
+    // function findOcc(str,ltr) {
+    //     var spilitted = str.toLowerCase().split("");
+    //     var occurances = 0;
+    //     for (var i = 0; i < spilitted.length; i++) {
+    //         if(spilitted[i] == ltr) {
+    //             occurances++;
+    //         }
+    //     }
+    //     document.write("Text: " + str + "<br>");
+    //     document.write("There are '" + occurances + "' occurance(s) of letter '" + ltr + "'");
+    // }
+    // var str = "The quick brown fox jumps over lazy the dog";
+    // var ltr = "o";
+    // findOcc(str,ltr);
+    
+    // //task14
+    // function calcCircumference(r = 10) {
+    //     var circumference = (2 * 3.142 * r).toFixed(2);
+    //     alert("The circumference is " + circumference);
+    // }
+    // function calcArea(r = 10) {
+    //     var area = (3.142 * (r*r)).toFixed(2);
+    //     alert("The area is " + area);
+    // }
+    // calcCircumference();
+    // calcArea();
